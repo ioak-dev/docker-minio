@@ -1,0 +1,25 @@
+version: "3.4"
+
+services:
+  minio:
+    image: minio/minio
+    container_name: minio
+    restart: always
+    volumes:
+      - /mnt/disks/sdb/data/minio:/data
+    ports:
+      - 9000:9000
+    environment:
+      MINIO_ROOT_USER: <user>
+      MINIO_ROOT_PASSWORD: <pass>
+      MINIO_ACCESS_KEY: <accesskey>
+      MINIO_SECRET_KEY: <secretkey>
+    command: server /data
+    networks:
+      ioak-net:
+        aliases:
+          - minio.docker
+
+networks:
+  ioak-net:
+    name: ioak-network
