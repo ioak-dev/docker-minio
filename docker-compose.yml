@@ -8,7 +8,7 @@ services:
     volumes:
       - /ext-drive/data/minio:/data
     ports:
-      - 8115:8115
+      - 8085:8085
     environment:
       MINIO_ROOT_USER: <user>
       MINIO_ROOT_PASSWORD: <pass>
