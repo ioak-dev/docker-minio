@@ -8,7 +8,7 @@ services:
     volumes:
       - /mnt/disks/sdb/data/minio:/data
     ports:
-      - 8075:8075
+      - 8115:8115
     environment:
       MINIO_ROOT_USER: <user>
       MINIO_ROOT_PASSWORD: <pass>
@@ -22,4 +22,4 @@ services:
 
 networks:
   ioak-net:
-    name: ioak-network
+    external: true
