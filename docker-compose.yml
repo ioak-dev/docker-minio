@@ -15,7 +15,7 @@ services:
       MINIO_ROOT_PASSWORD: <pass>
       MINIO_ACCESS_KEY: <accesskey>
       MINIO_SECRET_KEY: <secretkey>
-    command: server /data --console-address ":8086"
+    command: server /data --console-address ":8086" --address ":8085"
     networks:
       ioak-net:
         aliases:
