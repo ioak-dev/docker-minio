@@ -6,7 +6,7 @@ services:
     container_name: minio
     restart: always
     volumes:
-      - /mnt/disks/sdb/data/minio:/data
+      - /ext-drive/data/minio:/data
     ports:
       - 8115:8115
     environment:
